@@ -1,0 +1,45 @@
+info_bot:
+  class: InformationBot
+  module: info_bot
+  mastodon_key: XXXXX
+  mastodon_secret: XXXXX
+  mastodom_token: XXXXX
+  mastodon_base_url: "https://XXXXX.XXXXX.XXXXX"
+  tidal_broadcast: true
+  pressure_sensor:
+    - sensor.weather_station_absolute_pressure
+  temperature_sensor:
+    - sensor.weather_station_outdoor_temperature
+  feellike_temperature_sensor:
+    - sensor.weather_station_feels_like_temperature
+  humidity_sensor:
+    - sensor.weather_station_humidity
+  uv_sensor:
+    - sensor.weather_station_uv_index
+  rain_sensor:
+    - sensor.weather_station_daily_rain_rate
+  pressure_last_read: input_number.weather_pressure_last_reading
+  temperature_last_read: input_number.weather_temp_last_reading
+  feellike_temperature_last_read: input_number.weather_feellike_temp_last_reading
+  humidity_last_read: input_number.weather_humidity_last_reading
+  carbon_intensity_sensor: sensor.carbon_intensity_uk
+  location: East Sheen SW14
+  hashtags: "#SW14 #EastSheen #Mortlake #RichomdUponThames #Richmond"
+  update_previous: true
+  dev_test: false
+  flood_areas:
+    - sensor.flood_alert_063fwt23mortlake
+    - sensor.flood_alert_063fwt23barnes
+    - sensor.flood_alert_063wat23west
+
+  water_level:
+    - sensor: sensor.richmond_water_level_tidal_level
+      label: Richmond
+
+  influx_creds:
+    url: "http://localhost:8086"
+    bucket: "homeassistant"
+    org: "homeassistant"
+    token: "XXXXX"
+
+  airplane_count_sensor: sensor.aircraft_monitor
